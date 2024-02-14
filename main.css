@@ -1,0 +1,382 @@
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    font-family: 'SF UI Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+
+header {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 60px; /* Adjust as needed */
+}
+
+.rightLeftMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+a {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.preview_text_assortiment {
+    display: flex;
+    color: black;
+    font-size: 42px;
+    font-weight: 600;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.preview_text_certificates {
+    display: flex;
+    color: black;
+    font-size: 42px;
+    font-weight: 600;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.assortiment {
+    width: 100%; /* Устанавливаем ширину секции на 100% от родительского элемента */ /* Устанавливаем высоту секции на 300 пикселей */
+    background-image: url('images/background/subtle-prism (6).svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.assortCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем контейнер по горизонтали */
+    margin: 0 400px; /* Отступы по краям */
+}
+
+.product-card {
+    width: calc(25% - 20px); /* Здесь вычитаем отступы */
+    max-width: 200px; /* Фиксированная ширина карточки */
+    height: 290px; /* Фиксированная высота карточки */
+    margin: 30px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.70);
+    overflow: hidden;
+    background-color: #fff;
+    animation: fadeIn 1s linear; /* CSS-анимация с задержкой в 1 секунду */
+    animation-fill-mode: forwards; /* Для сохранения конечного состояния после анимации */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.product-card img {
+    width: 100%; /* Ширина изображения внутри карточки */
+    height: auto; /* Автоматическая высота */
+    border-radius: 10px 10px 0 0; /* Закругление углов только сверху */
+}
+
+.product-title {
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 10px; /* Отступы вокруг текста */
+    margin: 0; /* Убираем отступы */
+}
+.product-price {
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 10px; /* Отступы вокруг текста */
+    margin: 0; /* Убираем отступы */
+}
+
+.certificates {
+    width: 100%;
+    height: 1200px;
+    background-image: url("images/background/subtle-prism (6).svg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.certificate-card img {
+    width: 100%; /* Ширина изображения внутри карточки */
+    height: auto; /* Автоматическая высота */
+    border-radius: 10px 10px 0 0; /* Закругление углов только сверху */
+}
+
+.certificate-card {
+    width: 600px;
+    margin: 30px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.70);
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.2s linear;
+}
+
+
+.button_assort {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 400px;
+    will-change: transform;
+}
+
+.btn_asrt_area {
+    display: flex;
+    justify-content: space-between;
+}
+.contacts {
+    height: 600px;
+    width: 100%; /* Устанавливаем ширину секции на 100% от родительского элемента */ /* Устанавливаем высоту секции на 300 пикселей */
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.slide_btn{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.icons_contacts{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo_contacts img{
+    margin-top: 50px;
+    max-height: 200px;
+    margin-left: 50px;
+
+}
+.contacts_info{
+    display: flex;
+}
+.foot_icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+/* Стили для всплывающего окна */
+.product-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 400px; /* Ширина всплывающего окна */
+    border-radius: 18px;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.product-popup img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.product-popup img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-description{
+    white-space: pre-line;
+}
+/* Стили для затемненного фона */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный цвет */
+    z-index: 999; /* Убедитесь, что z-index выше, чем у всплывающего окна */
+}
+
+.overlay.active {
+    display: block; /* Показываем затемненный фон, когда класс active применяется */
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: width: calc(50% - 20px);
+        max-width: 200px;
+        max-height: 250px;
+        margin: 30px;
+        border-radius: 18px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.70);
+        overflow: hidden;
+        background-color: #fff;
+        animation: fadeIn 1s linear;
+        animation-fill-mode: forwards;
+    }
+    .logo img {
+        margin-bottom: 10px; /* Добавлено для разделения логотипа и пунктов меню */
+    }
+
+    .rightLeftMenu {
+        justify-content: center;
+    }
+
+    .assortCard {
+        margin: 0 10px; /* Уменьшено расстояние между карточками */
+    }
+
+    .product-card {
+        width: calc(50% - 20px); /* Изменено количество карточек в ряду на две */
+    }
+
+    .certificates {
+        height: auto; /* Автоматическая высота для контейнера сертификатов */
+    }
+
+    .certificate-card {
+        width: 90%; /* Ширина сертификатов уменьшена для мобильных устройств */
+    }
+
+    .button_assort {
+        width: 90%; /* Ширина кнопок ассортимента уменьшена для мобильных устройств */
+    }
+
+    .contacts {
+        height: auto; /* Автоматическая высота для контактной информации */
+    }
+
+    .logo_contacts img {
+        margin-top: 20px; /* Уменьшено отступы для логотипа */
+    }
+
+    .foot_icons {
+        margin-left: 0; /* Убран отступ слева для иконок контактов */
+    }
+    .preview_text_assortiment {
+        display: flex;
+        color: black;
+        font-size: 25px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: center;
+    }
+    .preview_text_certificates {
+        display: flex;
+        color: black;
+        font-size: 25px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ваши стили для планшетов */
+    .assortCard {
+        margin: 0 50px; /* Пример изменения отступов для планшетов */
+    }
+
+    .product-card {
+        width: calc(33.33% - 20px); /* Пример изменения ширины карточки на планшетах */
+    }
+
+    /* Добавьте любые другие необходимые стили */
+}

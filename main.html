@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-ui-display" rel="stylesheet">
+    <title>Online Store</title>
+</head>
+<body>
+<div class="background-image"></div>
+<div class="overlay"></div>
+<header>
+    <div class="logo">
+        <img src="images/logo/photo_2024-01-31_12-17-13.png" alt="Company Logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="images/icons/icons8-whatsapp%20(1).svg" alt="whatsApp Logo" onclick="handleImageWhassApp()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="images/icons/icons8-instagram.svg" alt="instagram Logo" onclick="handleImageInsta()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="images/icons/icons8-логотип-telegram.svg" alt="telegram Logo" onclick="handleImageInsta()">
+    </div>
+    <div>
+        <h2>Преодолей свои лимиты вместе с kachman.kz</h2>
+    </div>
+    <div>
+        <ul class="rightLeftMenu">
+            <li><a href="#assortiment">Ассортимент</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="#certificates">Сертификаты</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <section id="assortiment" class="assortiment">
+        <div class="preview_text_assortiment">
+            <h1>Наш ассортимент</h1>
+        </div>
+        <div id="productPopup" class="product-popup">
+            <div class="popup-content">
+                <span class="close-popup" onclick="closePopup()">&times;</span>
+                <img id="popupImg" src="" alt="Product Image">
+                <h2 id="popupTitle" class="product-title"></h2>
+                <h2 id="popupPrice" class="product-price"></h2>
+                <p id="popupDescription" class="product-description"></p>
+            </div>
+        </div>
+        <div class="btn_asrt_area">
+            <button id="showAssortment1" class="button_assort">Таблетки</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="showAssortment2" class="button_assort">Иньекции</button>
+        </div>
+        <div class="assortCard">
+            <div class="product-card">
+                <img src="images/assortiment/tablets/metandol.png" alt="Product 5">
+                <h3 class="product-title">Метандол 10</h3>
+                <h3 class="product-price">Цена: 9 000</h3>
+                <p  class="product-description"> С ним атлетам удается добиться значительного прироста массы мышц через активацию протеинового синтеза. Для начала требуется составить грамотный курсовой прием метандростенолона на период от 5 до 8 недель. С правильным соблюдением всех манипуляций, человек наберет до 10 кг массы мышц с минимально возможным дальнейшим </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/Turinodol.png" alt="Product 14">
+                <h3 class="product-title">Туринодол 10</h3>
+                <h3 class="product-price">Цена: 16 000</h3>
+                <p  class="product-description"> Описываемый стероид продается уже много лет. Его употребляли и употребляют многие спортсмены, подавляющая часть которых осталась довольна полученными результатами. Если говорить о достоинствах препарата, следует отметить то, что допускается его сочетание с другими веществами, и умеренную стоимость, которая в полной мере соответствует его качеству.
+
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/oxydol.png" alt="Product 10">
+                <h3 class="product-title">Оксидол 25</h3>
+                <h3 class="product-price">Цена: 16 000</h3>
+                <p  class="product-description"> Обладает высоким анаболическим индексом. В этом плане он активнее тестостерона на 320%, а андрогенная активность снижена до 45%. Описываемый препарат не конверсируется в эстрогены, но ему присущ эстрогенный эффект. Примечательно то, что среди всех стероидов, принимаемых орально, Анаполон имеет наиболее мощный эффект.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/oxandol.png" alt="Product 9">
+                <h3 class="product-title">Оксандол 10</h3>
+                <h3 class="product-price">Цена: 23 000</h3>
+                <p  class="product-description"> Один курс оксандролона оказывает крайне позитивный эффект на телостроение, укрепление и улучшение рельефности мускулатуры, позволяет:<br/>
+                    •	качественно избавляться от подкожного жира;<br/>
+                    •	выводить лишнюю жидкость из организма;<br/>
+                    •	повышать выносливость и силовые показатели спортсмена
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/mk677.png" alt="Product 7">
+                <h3 class="product-title">МК 677</h3>
+                <h3 class="product-price">Цена: 34 000</h3>
+                <p  class="product-description"> Улучшает энергетический обмен. Способствует росту выносливости и пиковой силы. Моделирует углеводный и липидный обмен, переводит мышцы на топливо из жирных кислот, помогает избавляться от лишнего жира даже на фоне погрешностей в диете. Достигаются перечисленные эффекты без негативного влияния на гормональный баланс. Ибутаморен не относится ни к пептидным, ни к стероидным гормонам. На курсе не подавляется продукция тестостерона и не повышается уровень эстрадиола и пролактина, что свойственно стероидам. Эта особенность избавляет от необходимости в ПКТ и исключает феномен отката — потерю мышечной массы, неизбежную после стероидных курсов.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/lgd4033.png" alt="Product 4">
+                <h3 class="product-title">LGD 4033</h3>
+                <h3 class="product-price">Цена: 18 000</h3>
+                <p  class="product-description"> Лигандрол (соединение LGD-4033) от Vertex – это сарм для ускорения роста сухой мышечной массы и увеличения силовых показателей в короткие сроки. Он относится к САРМам (SARMs) – селективным модуляторам андрогенных рецепторов. На сегодняшний день он является самым действенным в своем классе. Из-за селективного действия он активен только в мышечной и костной тканях. Поэтому не приносит вреда, например, печени и предстательной железе, которые первыми попадают под удар при приеме анаболических стероидов.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/clenodol.png" alt="Product 4">
+                <h3 class="product-title">Clenodol</h3>
+                <h3 class="product-price">Цена: 8 500</h3>
+                <p  class="product-description"> Бодибилдеры и другие спортсмены покупают этот препарат в основном с целью сжигания излишнего жира. Это и не удивительно, ведь для данного средства не характерны андрогенные и анаболические свойства, а лишь незначительные антикатаболические.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/anazdol.png" alt="Product 1">
+                <h3 class="product-title">Аназдол</h3>
+                <h3 class="product-price">Цена: 8000</h3>
+                <p  class="product-description"> Применяется для снижения Эстрогена во время приема анаболических стероидов.</p>
+
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/clomidol.png" alt="Product 2">
+                <h3 class="product-title">Кломидол 25</h3>
+                <h3 class="product-price">Цена: 11 000</h3>
+                <p  class="product-description"> Применяется для восстановления собственной выработки тестостерона после приема анаболических стероидов и половой дисфункции.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/tablets/stanodol.png" alt="Product 15">
+                <h3 class="product-title">Станодол 10</h3>
+                <h3 class="product-price">Цена: нет цены</h3>
+                <p  class="product-description"> Как большинство ААС в таблетированной форме, гораздо быстрее включается в работу. Станозолол наделен коротким сроком полувыведения из организма, что вынуждает атлета употреблять его каждый день. Из-за удобной формы выпуска эта проблема решена производителем.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/bolden-u_.png" alt="Product 16">
+                <h3 class="product-title">Bolden-U 250</h3>
+                <h3 class="product-price">Цена: 15 000</h3>
+                <p  class="product-description"> Болденон ундеселинат – препарат, характеристиками и своим воздействием похожий на нандролон и примоболан. Он отличается тем, что с его помощью можно нарастить качественную массу мышц.
+                    Продукт обрел популярность и востребованность у легкоатлетов. И произошло это из-за того, что с ним увеличивается число эритроцитов крови, а это значит, кислород лучше поставляется к мышцам.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/masto-e_.png" alt="Product 17">
+                <h3 class="product-title">Masto-E 200</h3>
+                <h3 class="product-price">Цена: 27 000</h3>
+                <p  class="product-description"> •	обеспечивает плотность и рельеф мышц, с прорисовкой вен;<br/>
+                    •	 устраняет накопление жидкости в тканях;<br/>
+                    •	 утилизирует жировые накопления;<br/>
+                    •	 увеличивает силовые возможности
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/masto-p_.png" alt="Product 18">
+                <h3 class="product-title">Masto-P 100</h3>
+                <h3 class="product-price">Цена: 17 000</h3>
+                <p  class="product-description"> Спортсменами препарат Дростанолон используется, в первую очередь, для стимула роста мышечной массы. Кроме этого, во время усиленных занятий повышается в значительной степени выносливость, ощущается прилив силы. Также препарат отлично подойдет спортсменам в период активной сушки. Такое средство продается в столице исключительно в специализированных магазинах, в аптеках препарата нет.
+                    Продукт отличается быстрым эффектом, практически сразу же после инъекции он начинает работать, несмотря на то, что период его полураспада всего двое суток. Воздействует он на организм мягко, но спортсмен уже за непродолжительный период сможет наблюдать заметные и ощутимые результаты.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/nandrol-d_.png" alt="Product 19">
+                <h3 class="product-title">Nandrol-D 200</h3>
+                <h3 class="product-price">Цена: 16 000</h3>
+                <p  class="product-description"> При изготовлении продукции применяется современное оборудование, самые новые технологии и качественные компоненты, поэтому препараты в форме инъекций, выпускаемые этой фирмой, имеют высокую устойчивость к кристаллизации и не выпадают в осадок.
+                    Следует подчеркнуть, что вязкость раствора всех анаболических андрогенных стероидов в форме инъекций подобрана так, что после применения, они равномерно распределяются по тканям организма. Поэтому появления осложнений после проведения такой инъекции практически не бывает.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/nandrol-p_.png" alt="Product 20">
+                <h3 class="product-title">Nandrol-P 100</h3>
+                <h3 class="product-price">Цена: 10 000</h3>
+                <p  class="product-description"> Нандролон фенилпропионат– самый популярный и востребованный стероид, с которым спортсмены добиваются быстрого прироста массы мышц. Если с его употреблением одновременно соблюдать сбалансированное питание и спортивную диету, то эффект не заставит себя долго ждать. Атлет наберет до 5-6 кг чистых мышц. Частота наступления побочных эффектов минимизирована с приемом в малых дозах. Откат крайне мал и практически незаметен.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/sustanon_.png" alt="Product 22">
+                <h3 class="product-title">Sustanon 250</h3>
+                <h3 class="product-price">Цена: 15 000</h3>
+                <p  class="product-description"> SUST – это достаточно популярный среди атлетов препарат, произведенный на основе сочетания четырех эфиров тестостерона. Признан стероидом, который идеально подходит для силовых видов спорта, бодибилдинга и других тренировочных целей.
+                    В настоящее время препарат SUST используется спортивными фармакологами, а ранее применялся в терапевтических целях, когда у организма был недостаток внутреннего тестостерона
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/testo-c__.png" alt="Product 23">
+                <h3 class="product-title">Testo-C 250</h3>
+                <h3 class="product-price">Цена: 14 000</h3>
+                <p  class="product-description"> В Европе и Америке, как среди профессионалов, так и для любителей, первое место заслужено занимает тестостерон ципионат. По своей структуре он представляет эфир с длинной цепочкой, потому отличается пролонгированным действием. Период распада достигает 6-8 дней. При этом время общей активности вещества в организме составляет в 15 дней. Согласно отзывам западных атлетов, популярность тестостерона ципионата обусловлена не только выгодной ценой, но и более выраженным анаболическим эффектом.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/testo-e_.png" alt="Product 24">
+                <h3 class="product-title">Testo-E 250</h3>
+                <h3 class="product-price">Цена: 14 000</h3>
+                <p  class="product-description"> Enanthate 250 обеспечивает ускоренный набор мышечной массы. Это происходит путем задержания в организме белка, а вместе с ним и жидкости. Вместе с ними в мышцах остаются и полезные элементы, благодаря которым мышечная масса растет. После физических упражнений, сопряженных с максимальными нагрузками, препарат обеспечивает восстановление работоспособности, благодаря притоку кислорода в ткани.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/testo-p_.png" alt="Product 25">
+                <h3 class="product-title">Testo-P 100</h3>
+                <h3 class="product-price">Цена: 9 000</h3>
+                <p class="product-description"> •	Мышцы быстро и интенсивно увеличиваются в объеме, показатели силы и выносливости растут, восстановительные процессы в тканях организма значительно ускоряются, улучшается настроение, повышается жизненный тонус;<br/>
+                    •	Увеличивается выраженность вторичных мужских половых признаков (волосы на лице становятся более густыми, растут быстрее, голос становится более грубым);<br/>
+                    •	Укрепляются ткани, формирующие суставной и связочный аппарат организма, улучшается выработка синовиальной жидкости в полости суставов, благодаря чему уменьшается трение контактирующих суставных поверхностей костей;
+
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/testo-u_.png" alt="Product 26">
+                <h3 class="product-title">Testo-U 250</h3>
+                <h3 class="product-price">Цена: нет цены</h3>
+                <p class="product-description"> Используется для гормональной заместительной терапии </p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/tren-a_.png" alt="Product 27">
+                <h3 class="product-title">Tren-A 100</h3>
+                <h3 class="product-price">Цена: 20 000</h3>
+                <p class="product-description"> Этот препарат считается самой популярной формой тренболона на сегодняшний день, который выпускается под торговыми названиями Трен, финаджект, треножект и некоторыми другими. В былые времена это стероидное средство использовалось в области ветеринарной медицины, чтобы усиливать аппетит и стимулировать ускоренный набор мышц крупным рогатым скотом. С ходом времени препарат постепенно перекочевал в большой спорт, где его широко применяют во время тренировочного процесса бодибилдеры, тяжелоатлеты, люди, занимающиеся пауэрлифтингом и легкоатлеты.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/tren-e_.png" alt="Product 28">
+                <h3 class="product-title">Tren-E 200</h3>
+                <h3 class="product-price">Цена: 30 000</h3>
+                <p class="product-description"> Тренболон Энантат по своим фармакологическим особенностям похож на тренболон ацетат, однако есть и существенные отличия. Одно из них, период длительности действия энантата, порядка 10дней. Свое признание он снискал благодаря силовым показателям, а также не способностью трансформироваться в гормоны.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/assortiment/injections/tren-e_.png" alt="Product 28">
+                <h3 class="product-title">Primo-E 100</h3>
+                <h3 class="product-price">Цена: 28 000</h3>
+                <p class="product-description"> • Слабовыраженный феномен отката;<br/>
+                    • Наличие жиросжигающего эффекта;<br/>
+                    • Умеренный уровень анаболической активности;<br/>
+                    • Придание рельефности мускулатуре;<br/>
+                    • Отсутствие токсического воздействия на печень.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="certificates" class="certificates">
+        <div class="preview_text_certificates">
+            <h1>Сертификат</h1>
+        </div>
+        <div class="slide_btn">
+            <div class="controls">
+                <div class="prev">
+                    <img src="images/icons/arrow-left-o.svg" alt="arrow_left">
+                </div>
+            </div>
+            <div class="certificate-card">
+                <img src="images/certificate/photo_1_2024-02-12_15-11-00.jpg" alt="certificate 1" class="slide">
+                <img src="images/certificate/photo_2_2024-02-12_15-11-00.jpg" alt="certificate 2" class="slide">
+                <img src="images/certificate/photo_3_2024-02-12_15-11-00.jpg" alt="certificate 3" class="slide">
+                <img src="images/certificate/photo_4_2024-02-12_15-11-00.jpg" alt="certificate 4" class="slide">
+                <img src="images/certificate/photo_5_2024-02-12_15-11-00.jpg" alt="certificate 5" class="slide">
+                <img src="images/certificate/photo_6_2024-02-12_15-11-00.jpg" alt="certificate 6" class="slide">
+                <img src="images/certificate/photo_7_2024-02-12_15-11-00.jpg" alt="certificate 7" class="slide">
+                <img src="images/certificate/photo_8_2024-02-12_15-11-00.jpg" alt="certificate 8" class="slide">
+            </div>
+
+            <div class="controls">
+                <div class="next">
+                    <img src="images/icons/arrow-right-o.svg" alt="arrow_right">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="logo_contacts">
+            <img src="images/logo/photo_2024-01-31_12-17-13.png" alt="logo_foot">
+        </div>
+        <br/>
+        <div class="contacts_info">
+            <div class="icons_contacts">
+                <img src="images/icons/airplane.svg" alt="plane">
+                <p>Быстрая доставка по всему Казахстану</p>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="icons_contacts">
+                <img src="images/icons/phone.svg" alt="plane">
+                <p>Бесплатная консультация</p>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="icons_contacts">
+                <img src="images/icons/notes.svg" alt="plane">
+                <p>Сертифицированная продукция</p>
+            </div>
+        </div>
+        <br/><br/><br/>
+        <div class="foot_icons">
+            <div>
+                <h3>Контакты:</h3>
+            </div>
+            <div>
+
+                <img src="images/icons/icons8-whatsapp%20(1).svg" alt="whatsApp Logo" onclick="handleImageWhassApp()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="images/icons/icons8-instagram.svg" alt="instagram Logo" onclick="handleImageInsta()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="images/icons/icons8-логотип-telegram.svg" alt="telegram Logo" onclick="handleImageInsta()">
+            </div>
+
+        </div>
+    </section>
+</main>
+<script>
+    // Функция для обработки клика на изображении
+    function handleImageInsta() {
+        // Переход по ссылке
+        window.location.href = "https://www.instagram.com/kachman.kz/?igsh=MXRoN2xiOWFkb2g5&utm_source=qr";
+    }
+
+    function handleImageWhassApp() {
+        window.location.href = "https://api.whatsapp.com/send?phone=77064264614"
+    }
+
+    // Находим кнопки и ассортимент
+    const showAssortment1Button = document.getElementById("showAssortment1");
+    const showAssortment2Button = document.getElementById("showAssortment2");
+    const assortimentSection = document.getElementById("assortiment");
+    const allProductCards = assortimentSection.querySelectorAll(".product-card");
+
+    // Показываем первую половину карточек при загрузке страницы
+    allProductCards.forEach((card, index) => {
+        if (index < 9) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    // Определяем, какие карточки показывать при нажатии на первую кнопку
+    showAssortment1Button.addEventListener("click", function () {
+        allProductCards.forEach((card, index) => {
+            if (index < 9) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+
+    // Определяем, какие карточки показывать при нажатии на вторую кнопку
+    showAssortment2Button.addEventListener("click", function () {
+        allProductCards.forEach((card, index) => {
+            if (index >= 9) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".slide");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.style.display = "none");
+            slides[n].style.display = "block";
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide(currentSlide);
+        }
+
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        showSlide(currentSlide);
+    });
+
+
+    // Функция для открытия всплывающего окна
+    function openPopup(title, price,description, imgSrc) {
+        const popup = document.getElementById("productPopup");
+        const imgElement = document.getElementById("popupImg");
+        const titleElement = document.getElementById("popupTitle");
+        const titlePrice = document.getElementById("popupPrice");
+        const descriptionElement = document.getElementById("popupDescription");
+        const overlay = document.querySelector(".overlay");
+
+        imgElement.src = imgSrc;
+        titleElement.textContent = title;
+        descriptionElement.textContent = description;
+        titlePrice.textContent = price;
+
+
+        popup.style.display = "block";
+        overlay.style.display = "block"; // Показываем затемненный фон
+    }
+
+    // Функция для закрытия всплывающего окна
+    function closePopup() {
+        const popup = document.getElementById("productPopup");
+        const overlay = document.querySelector(".overlay");
+
+        popup.style.display = "none";
+        overlay.style.display = "none"; // Скрываем затемненный фон
+    }
+
+    // Обработчики событий для каждой карточки товара
+    const productCards = document.querySelectorAll(".product-card");
+    productCards.forEach(function(card) {
+        card.addEventListener("click", function() {
+            const title = card.querySelector(".product-title").textContent;
+            const price = card.querySelector(".product-price").textContent;
+            const imgSrc = card.querySelector("img").src;
+            const description = card.querySelector(".product-description").textContent;
+
+            openPopup(title, price, description, imgSrc);
+        });
+    });
+
+
+</script>
+</body>
+</html>
